@@ -10,10 +10,8 @@ return [
             "render" => "eitb::types.image-text",
         ],
     ],
-
     // Admin
     "customImageTextComponent" => null,
-
     // Templates
     "templates" => [
         "image-text-record" => \GIS\EditableImageTextBlock\Templates\ImageTextRecord::class,
