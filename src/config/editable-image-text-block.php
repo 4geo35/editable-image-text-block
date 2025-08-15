@@ -5,7 +5,7 @@ return [
         "imageText" => [
             "title" => "Текст с изображением",
             // Livewire компонент для админки
-            "admin" => "eb-image-text",
+            "admin" => "eitb-image-text",
             // Компонент для вывода блока
             "render" => "eitb::types.image-text",
         ],
