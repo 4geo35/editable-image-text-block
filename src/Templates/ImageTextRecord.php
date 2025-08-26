@@ -10,6 +10,6 @@ class ImageTextRecord implements ModifierInterface
 {
     public function apply(ImageInterface $image): ImageInterface
     {
-        return $image->cover(672, 414);
+        return $image->cover(660, 414);
     }
 }
