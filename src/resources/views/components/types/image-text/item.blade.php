@@ -10,6 +10,7 @@
                 <div class="prose max-w-none prose-p:leading-6">
                     {!! $item->recordable->markdown !!}
                 </div>
+                @includeIf("ebtns::web.render-buttons", ["blockItem" => $item])
             </div>
         </div>
         <div class="col w-full lg:w-1/2 relative mb-indent-half lg:mb-0">
@@ -30,5 +31,6 @@
         <div class="prose max-w-none prose-p:leading-6">
             {!! $item->recordable->markdown !!}
         </div>
+        @includeIf("ebtns::web.render-buttons", ["blockItem" => $item])
     @endif
 </div>

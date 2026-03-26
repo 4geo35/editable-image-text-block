@@ -11,6 +11,7 @@
                 @include("eitb::admin.types.image-text.item")
                 @include("eb::admin.types.includes.help-info")
             </div>
+            @includeIf("ebtns::admin.btn-component", ["blockItem" => $item])
         </div>
     @endforeach
 </div>
