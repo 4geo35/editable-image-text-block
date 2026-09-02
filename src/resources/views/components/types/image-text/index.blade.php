@@ -1,12 +1,13 @@
 @props(["block", "isFullPage" => true])
 @if ($block->items->count())
-    @if ($block->render_title)
+    @php($hasTitle = (bool) $block->render_title)
+    @if ($hasTitle)
         <x-tt::h2 class="mb-indent-half">{{ $block->render_title }}</x-tt::h2>
     @endif
     <div {{ $attributes->merge(["class" => "flex flex-col gap-indent lg:gap-indent-double"]) }}>
         @foreach($block->items as $index => $item)
-            @if ($isFullPage) <x-eitb::types.image-text.item :$item :$index />
-            @else <x-eitb::types.image-text.two-thirds-item :$item :$index />
+            @if ($isFullPage) <x-eitb::types.image-text.item :$item :$index :$hasTitle />
+            @else <x-eitb::types.image-text.two-thirds-item :$item :$index :$hasTitle />
             @endif
         @endforeach
     </div>

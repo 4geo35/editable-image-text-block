@@ -1,4 +1,4 @@
-@props(["item", "index"])
+@props(["item", "index", "hasTitle" => false])
 @php($hasImage = $item->recordable->image_id)
 <div class="">
     @if ($hasImage)
@@ -17,7 +17,11 @@
 
     <div class="">
         @if ($item->title)
-            <h4 class="text-3xl xs:text-4xl font-bold mb-indent-half">{{ $item->title }}</h4>
+            @if ($hasTitle)
+                <h3 class="text-h3-mobile sm:text-h3 font-semibold mb-indent-half">{{ $item->title }}</h3>
+            @else
+                <h2 class="text-h2-mobile sm:text-h2 font-semibold mb-indent-half">{{ $item->title }}</h2>
+            @endif
         @endif
         <div class="prose max-w-none prose-p:leading-6">
             {!! $item->recordable->markdown !!}
