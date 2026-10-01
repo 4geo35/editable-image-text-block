@@ -3,7 +3,7 @@
 <div class="{{ $hasImage ? 'row' : 'w-full lg:w-8/12' }}">
     @if ($hasImage)
         <div class="col w-full lg:w-1/2 ml-auto order-last {{ $index % 2 > 0 ? 'lg:order-last' : 'lg:order-first' }}">
-            <div class="h-full flex flex-col justify-center mb-indent-half  2xl:w-[660px] {{ $index % 2 > 0 ? 'ml-auto' : 'mr-auto' }}">
+            <div class="h-full flex flex-col justify-center mb-indent-half 2xl:w-[660px] {{ $index % 2 > 0 ? 'ml-auto' : 'mr-auto' }}">
                 @if ($item->title)
                     @if ($hasTitle)
                         <h3 class="text-h3-mobile sm:text-h3 font-semibold mb-indent-half">{{ $item->title }}</h3>
